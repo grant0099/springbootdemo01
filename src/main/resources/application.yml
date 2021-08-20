@@ -1,0 +1,45 @@
+server:
+  port: 8081
+  path: /hello
+
+#person:
+#  lastName: aName
+#  age: 18
+#  boss: false
+#  birth: 2017/12/12
+#  maps: {k1: v1,K2: v2}
+#  lists:
+#    - test1
+#    - test2
+#  dog:
+#    name: 狗狗
+#    age: 2
+#大小寫敏感
+
+
+
+#1.普通的值
+#字串可不需引號
+#"" 雙引號保留特殊字串意思  Ex:\n => 換行
+#'' 單引號將特殊字串轉為一般字串
+
+
+
+#2.物件,map
+#k: v: 表示一對;
+
+#friends:
+#    lastName: aName
+#    age: 20
+
+#行內寫法
+#friends: {lastName: aName,age: 20}
+
+#3.list set
+#用- 值 表示陣列的一個元素
+#pets:
+# - cat
+# - dog
+# - pig
+#行內寫法
+#pets: [cat,dog,pig]
