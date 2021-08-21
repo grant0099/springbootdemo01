@@ -1,6 +1,30 @@
 server:
   port: 8081
   path: /hello
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8083
+  path: /hello
+#debug: true
+spring:
+  profiles: dev
+---
+server:
+  port: 8084
+  path: /hello
+spring:
+  profiles: prod
+
+#--spring.profiles.active=dev  命令行指定配置文件
+
+#設定檔可識別位置 依照優先順序
+#file:../config/
+#file:../
+#classpath:/config/
+#classpath:/
 
 #person:
 #  lastName: aName

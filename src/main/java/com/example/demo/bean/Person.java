@@ -3,6 +3,7 @@ package com.example.demo.bean;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -20,8 +21,19 @@ import java.util.Map;
  *  @Value不支援鬆散語法綁定  @Value支援SpEL 不支援@Validated 不支援複雜數據如Object
  *
  */
-//@PropertySource(value = {"classpath:person.properties"})
+/**
+ * @Component
+ * @PropertySource(value = {"classpath:person.properties"})     可用來指定參照的設定檔名稱
+ * @ConfigurationProperties(prefix = "person")
+ */
+/**
+ * @Component
+ * @PropertySource(value = {"classpath:person.properties"})     可用來指定參照的設定檔名稱
+ * @ConfigurationProperties(prefix = "person")
+ */
+
 @Component
+@PropertySource(value = {"classpath:person.properties"})
 @ConfigurationProperties(prefix = "person")
 //@Validated
 public class Person {
